@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyGlass Weather</title>
+
+  <link rel="stylesheet" href="style.css">
+
+ <script src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
+</head>
+<footer class="credits">
+
+  <h3>Shout out to these boys 🔥</h3>
+
+  <p>Aarjav</p>
+  <p>Kashi Mahadev</p>
+
+</footer>
+<body>
+
+<div class="background"></div>
+
+<div class="dashboard">
+
+  <!-- HERO WEATHER CARD -->
+  <div class="card hero-card">
+
+    <div class="top">
+     <div class="search-bar">
+
+  <input
+  type="text"
+  id="cityInput"
+  placeholder="Search city">
+
+<button id="searchBtn">
+  Search
+</button>
+
+</div> <h1 id="city">London</h1>
+      <p id="date">Sunday, 24 May</p>
+    </div>
+
+    <div class="weather-main">
+
+      <div class="left">
+        <h2 id="temp">24°</h2>
+        <p id="condition">Cloudy</p>
+        <p id="feelsLike">Feels like 26°</p>
+      </div>
+
+      <div class="right">
+        <img id="weatherIcon"
+        src="https://openweathermap.org/img/wn/10d@4x.png">
+      </div>
+
+    </div>
+
+  </div>
+
+<!-- HOURLY FORECAST -->
+
+<div class="card hourly-card">
+
+  <h2>24 Hour Forecast</h2>
+
+  <div class="hourly-wrapper">
+
+    <div class="hourly-slider"></div>
+
+  </div>
+
+</div>
+
+  <!-- WEATHER STATS -->
+  <div class="stats-grid">
+
+    <div class="card stat-card">
+      <h3>Humidity</h3>
+      <p id="humidity">78%</p>
+    </div>
+
+    <div class="card stat-card">
+      <h3>Wind</h3>
+      <p id="wind">12 km/h</p>
+    </div>
+
+    <div class="card stat-card">
+      <h3>UV Index</h3>
+      <p id="uv">5</p>
+    </div>
+
+    <div class="card stat-card">
+      <h3>Pressure</h3>
+      <p id="pressure">1012 hPa</p>
+    </div>
+
+  </div>
+
+  <!-- 7 DAY FORECAST -->
+  <div class="card forecast-card">
+
+    <h2>7-Day Forecast</h2>
+
+    <div class="forecast-item">
+      <p>Monday</p>
+      <img src="https://openweathermap.org/img/wn/01d.png">
+      <p>30° / 24°</p>
+    </div>
+
+    <div class="forecast-item">
+      <p>Tuesday</p>
+      <img src="https://openweathermap.org/img/wn/10d.png">
+      <p>28° / 22°</p>
+    </div>
+
+  </div>
+
+  <!-- CHART -->
+  <div class="card chart-card">
+    <h2>Temperature Trend</h2>
+    <canvas id="tempChart"></canvas>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
